@@ -6,12 +6,25 @@ import fs from 'fs';
 
 const __dirname = path.resolve();
 const app = express();
-app.use(cors());
+
+// CORS configuration
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
+
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/fertilizerRecommender', {
+// MongoDB connection with environment variable
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/fertilizerRecommender';
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+}).then(() => {
+  console.log('Connected to MongoDB');
+}).catch((err) => {
+  console.error('MongoDB connection error:', err);
 });
 
 const FertilizerSchema = new mongoose.Schema({
@@ -62,7 +75,7 @@ app.post('/api/recommend-fertilizer', async (req, res) => {
   }
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
