@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 import numpy as np
 import tensorflow as tf
+from tensorflow import keras
 import uuid
 import os
 import json
@@ -10,7 +11,7 @@ app = Flask(__name__, static_folder='frontend/build', static_url_path='/')
 CORS(app)
 
 # Load model
-model = tf.keras.models.load_model("models/plant_disease_recog_model_pwp.keras")
+model = keras.models.load_model("models/plant_disease_recog_model_pwp.keras")
 
 # Load disease mapping
 with open("plant_disease.json", 'r') as file:
@@ -18,8 +19,8 @@ with open("plant_disease.json", 'r') as file:
 
 # Extract features from image
 def extract_features(image_path):
-    image = tf.keras.utils.load_img(image_path, target_size=(160, 160))
-    image_array = tf.keras.utils.img_to_array(image)
+    image = keras.utils.load_img(image_path, target_size=(160, 160))
+    image_array = keras.utils.img_to_array(image)
     image_array = np.expand_dims(image_array, axis=0)
     return image_array
 

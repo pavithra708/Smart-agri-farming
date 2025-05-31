@@ -40,14 +40,13 @@ A comprehensive smart agriculture solution that combines plant disease detection
 - **Main Backend**: Node.js with Express
 - **Chatbot Backend**: Node.js with TinyLlama integration
 - **Plant Disease Recognition**: Python with ML models
-- MongoDB for data storage
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js (v14 or higher)
 - Python 3.9
-- MongoDB
+- Ollama (for TinyLlama)
 - Git
 
 ### Installation
@@ -86,6 +85,24 @@ A comprehensive smart agriculture solution that combines plant disease detection
    python app.py
    ```
 
+6. **TinyLlama Setup and Run**
+   ```bash
+   # Install Ollama (if not already installed)
+   # For Windows:
+   winget install ollama
+   # For MacOS:
+   curl https://ollama.ai/install.sh | sh
+   # For Linux:
+   curl https://ollama.ai/install.sh | sh
+
+   # Start Ollama service
+   ollama serve
+
+   # In a new terminal, pull and run TinyLlama
+   ollama pull tinyllama
+   ollama run tinyllama
+   ```
+
 ### Environment Variables
 
 Create `.env` files in respective directories:
@@ -99,7 +116,6 @@ VITE_PLANT_DISEASE_URL=http://localhost:5002
 
 **Backend (.env)**
 ```
-MONGODB_URI=your_mongodb_uri
 PORT=5000
 FRONTEND_URL=http://localhost:5173
 ```
@@ -108,6 +124,12 @@ FRONTEND_URL=http://localhost:5173
 ```
 PORT=5001
 FRONTEND_URL=http://localhost:5173
+```
+
+**Plant Disease Recognition (.env)**
+```
+PORT=5002
+MODEL_PATH=models/plant_disease_recog_model_pwp.keras
 ```
 
 ## 📱 Usage
@@ -135,18 +157,11 @@ The project is deployed on:
 - Backend Services: Render
 
 ### Deployment URLs
-- Frontend: [Your Vercel URL]
+- Frontend: https://smart-agri-farming-rbrw.vercel.app/
 - Backend: https://smart-agri-backend.onrender.com
 - Chatbot: https://smart-agri-chatbot.onrender.com
 - Plant Disease: https://smart-agri-plant-disease.onrender.com
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📝 License
 
@@ -154,7 +169,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- Your Name - Initial work
+- Pavithra Revankar - Initial work
 
 ## 🙏 Acknowledgments
 
@@ -162,9 +177,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Plant disease detection model contributors
 - All open-source libraries used in this project
 
-## 📞 Support
-
-For support, email support@smartagriculture.com or open an issue in the repository.
 
 ## 🔄 Updates
 
@@ -178,9 +190,6 @@ For support, email support@smartagriculture.com or open an issue in the reposito
   - Image upload optimization
   - Chatbot response latency
 
-## 📱 Mobile App
-
-A mobile application is currently under development. Stay tuned for updates!
 
 ## 📚 API Documentation
 
