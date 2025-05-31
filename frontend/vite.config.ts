@@ -25,6 +25,7 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
       },
+      '/chat': 'http://localhost:11434', // TinyLLaMA
     },
   },
 });
