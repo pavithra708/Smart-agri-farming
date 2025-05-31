@@ -2,6 +2,9 @@
 
 A comprehensive smart agriculture solution that combines plant disease detection, fertilizer recommendations, and an AI-powered chatbot to assist farmers.
 
+### Deployment URLs
+- Frontend: https://smart-agri-farming-rbrw.vercel.app/
+
 ## 📸 Screenshots
 
 ### Main Dashboard
@@ -156,16 +159,16 @@ The project is deployed on:
 - Frontend: Vercel
 - Backend Services: Render
 
-### Deployment URLs
-- Frontend: https://smart-agri-farming-rbrw.vercel.app/
 
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+
 ## 👥 Authors
 
 - Pavithra Revankar - Initial work
+
 
 ## 🙏 Acknowledgments
 
