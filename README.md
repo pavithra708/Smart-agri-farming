@@ -178,19 +178,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - All open-source libraries used in this project
 
 
-## 🔄 Updates
-
-- Latest update: March 2024
-- Added new features:
-  - TinyLlama integration for improved chatbot responses
-  - Enhanced plant disease detection accuracy
-  - Mobile-responsive UI improvements
-- Fixed bugs:
-  - CORS issues in backend services
-  - Image upload optimization
-  - Chatbot response latency
-
-
 ## 📚 API Documentation
 
 ### Backend API Endpoints
@@ -248,24 +235,3 @@ Response:
 {
   "response": "string"
 }
-```
-
-## 🗺️ Project Roadmap
-
-### Phase 1 - Current Features ✅
-- [x] Plant disease detection
-- [x] Fertilizer recommendations
-- [x] AI chatbot integration
-- [x] Basic user interface
-
-### Phase 2 - Coming Soon 🚀
-- [ ] Weather integration
-- [ ] Crop yield prediction
-- [ ] Soil moisture monitoring
-- [ ] Mobile app development
-
-### Phase 3 - Future Enhancements 🔮
-- [ ] IoT device integration
-- [ ] Advanced analytics dashboard
-- [ ] Multi-language support
-- [ ] Offline mode
