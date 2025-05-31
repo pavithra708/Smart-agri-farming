@@ -5,7 +5,7 @@ import { initReactI18next } from 'react-i18next';
 import en_about from './locales/en/about.json';
 import en_chatbot from './locales/en/chatbot.json';
 import en_disease from './locales/en/disease.json';
-import en_fertilizerdata from '../backend/fertilizer_data.json';
+import en_fertilizerdata from "./data/fertilizer_data.json";
 
 import en_fertilizer from './locales/en/fertilizer.json';
 import en_loans from './locales/en/loans.json';
