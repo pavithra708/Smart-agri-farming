@@ -158,10 +158,6 @@ The project is deployed on:
 
 ### Deployment URLs
 - Frontend: https://smart-agri-farming-rbrw.vercel.app/
-- Backend: https://smart-agri-backend.onrender.com
-- Chatbot: https://smart-agri-chatbot.onrender.com
-- Plant Disease: https://smart-agri-plant-disease.onrender.com
-
 
 ## 📝 License
 
